@@ -14,9 +14,10 @@ const menuExit = document.querySelector('.menu__exit');
 const container = document.querySelectorAll('.container');
 
 let goSlider = function(sliderClass, width, elClass ) {
-	const windowWidth = window.innerWidth;
-	if (+windowWidth <= 767 && !sliderClass.classList.contains('swiper-initializited')) {
-		return mySwiper1 = new Swiper(sliderClass, {
+
+	if (window.innerWidth <= 767 && !sliderClass.classList.contains('swiper-initializited')) {
+        let mySwiper;
+		return mySwiper = new Swiper(sliderClass, {
             modules: [Navigation, Pagination],
 			slidesPerView: 1,
 			slideClass: 'swiper-slide',
