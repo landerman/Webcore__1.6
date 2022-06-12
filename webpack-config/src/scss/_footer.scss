@@ -1,0 +1,49 @@
+.footer {
+    padding-top: 32px;
+    opacity: 0.72;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: $menu-text-color;
+    font-weight: 500;
+
+
+
+    &__develop {
+        span {
+            display: block;
+        }
+
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        ;
+
+        &__develop {
+
+            text-align: left;
+        }
+
+        &__offer {
+            max-width: 215px;
+            text-align: right;
+        }
+
+    }
+}
+
+@media (min-width: 1440px) {
+    .footer__offer {
+        max-width: 330px;
+    }
+}

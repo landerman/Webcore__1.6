@@ -1,0 +1,136 @@
+.brands {
+
+    background: $background;
+
+
+    &__title {
+        height: 56px;
+        padding-top: 14px;
+        margin-bottom: 24px;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        color: $menu-text-color;
+        font-weight: 400;
+        background: linear-gradient(90deg, rgba(248, 248, 248, 0) 0%, rgb(255, 255, 255));
+
+    }
+
+    .swiper-brand {
+        width: 100%;
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            height: 72px;
+            list-style-type: none;
+            align-items: center;
+            background: $white;
+            border: 1px solid $light-gray;
+            border-radius: 6px;
+
+            img {
+                margin-left: 16px;
+            }
+
+            &--button {
+
+                width: 40px;
+                height: 40px;
+                background: url(../img/go.svg) no-repeat;
+                border: none;
+                margin-right: 16px;
+            }
+        }
+
+        &__pagination {
+
+            margin-top: 16px;
+            bottom: -16px;
+            text-align: center;
+        }
+
+    }
+
+    .swiper-pagination-bullet {
+        background-color: $pagination;
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        margin: 16px 12px 0 0;
+
+        &-active {
+            background-color: $pagination-active;
+        }
+    }
+
+
+
+
+    .checkbox {
+        margin-top: 24px;
+        display: none;
+        cursor: pointer;
+
+        &__image {
+            width: 24px;
+            height: 24px;
+            background: url(../img/arrow.svg) no-repeat;
+        }
+
+        &__read {
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: -0.2px;
+            color: $black;
+        }
+
+        &__transform {
+            transform: rotate(0.5turn);
+
+        }
+
+        &__input {
+            position: absolute;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        &__label {
+            display: flex;
+            width: 133px;
+            height: 24px;
+            margin-bottom: 16px;
+
+        }
+    }
+
+    @media (min-width:768px) {
+        .checkbox {
+            display: block;
+        }
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-column-gap: 3%;
+            grid-row-gap: 14px;
+            height: 160px;
+            overflow: hidden;
+        }
+        .swiper-slide {
+            box-sizing: border-box;
+            width: 100%;
+        }
+    }
+
+    @media (min-width:1440px) {
+        .swiper-wrapper {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        }
+
+    }
+}

@@ -1,0 +1,6 @@
+
+@import "./mixins/font-face";
+@include font-face("TTLakes", "TTLakes-Regular", 400);
+@include font-face("TTLakes", "TTLakes-Bold", 700);
+@include font-face("TTLakes", "TTLakes-Medium", 500);
+

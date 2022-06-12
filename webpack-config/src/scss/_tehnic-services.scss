@@ -1,0 +1,149 @@
+.tehnic-services {
+
+
+
+
+    .tehnic-services__title {
+
+        display: block;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        padding-top: 14px;
+        height: 56px;
+        margin-bottom: 24px;
+        background: linear-gradient(90deg, rgba(248, 248, 248, 0) 0%, rgba(255, 255, 255, 1));
+        color: $menu-text-color;
+    }
+
+    .swiper-slide {
+        min-width: 0;
+        width: 240px;
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style-type: none;
+        background: $white;
+        border: 1px solid $light-gray;
+        border-radius: 6px;
+        padding: 16px;
+        box-sizing: border-box;
+        font-weight: 500;
+    }
+
+    .swiper-slide_text {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $black;
+    }
+
+    .swiper-slide__button {
+        width: 40px;
+        height: 40px;
+        background: url(../img/go.svg) no-repeat;
+        border: none;
+        margin-right: 16px;
+        align-self: flex-end;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: $pagination;
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        margin: 16px 12px 0 0;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $pagination-active;
+    }
+
+    .tehnic-services__pagination {
+        position: static;
+        margin-top: 16px;
+        text-align: center;
+    }
+
+    .swiper {
+        width: 100%;
+    }
+
+
+    &__checkbox {
+        margin-top: 24px;
+        display: none;
+        cursor: pointer;
+
+        &--input {
+            position: absolute;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        &--label {
+            display: flex;
+            width: 133px;
+            height: 24px;
+            margin-bottom: 16px;
+        }
+
+        &--image {
+            width: 24px;
+            height: 24px;
+            background: url(../img/arrow.svg) no-repeat;
+        }
+
+        &--read {
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: -0.2px;
+            color: $black;
+        }
+    }
+
+    .checkbox__transform {
+        transform: rotate(0.5turn);
+    }
+
+
+
+
+    @media (min-width:768px) {
+
+
+        .tehnic-services__checkbox {
+            display: block;
+        }
+
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 3%;
+            grid-row-gap: 14px;
+            height: 160px;
+            overflow: hidden;
+        }
+
+        .swiper-slide {
+            width: 100%;
+        }
+    }
+
+    @media (min-width:1440px) {
+        .techic-services {
+            width: 77vw;
+        }
+
+        .swiper-wrapper {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+
+    }
+}

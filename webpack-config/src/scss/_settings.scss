@@ -1,0 +1,119 @@
+
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+    &::after {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+
+    &::before {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+body {
+    background: $background;
+    font-family: "TTLakes", sans-serif;
+
+}
+
+html,
+body {
+
+    overflow-x: hidden;
+}
+
+button{
+    cursor: pointer;
+}
+
+
+.container {
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 24px;
+    width: 100vw;
+    box-sizing: border-box;
+    padding-left: 16px;
+
+    &--filter {
+        filter: opacity(4%);
+        transition: all 0.5s ease-out;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        box-sizing: border-box;
+        width: calc(100vw - 320px);
+        margin-left: 320px;
+        padding-left: 32px;
+        padding-right: 32px;
+
+
+    }
+}
+
+.checkbox{
+    &__input {
+        position: absolute;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    
+    &__transform {
+        transform: rotate(0.5turn);
+    }
+    
+    &__read {
+        cursor: pointer;
+    }
+    
+    &__image {
+    
+        cursor: pointer;
+    }
+
+}
+
+.title-main {
+    font-size: 16px;
+    width: 100vw;
+    margin-left: -16px;
+    padding: 0 16px;
+    padding-top: 14px;
+
+    @media (min-width:768px) {
+        & {
+            padding: 0 24px;
+            padding-top: 14px;
+            margin-left: -24px;
+        }
+    }
+
+    @media (min-width:1440px) {
+        & {
+            padding: 0 32px;
+            padding-top: 14px;
+            margin-left: -32px;
+        }
+    }
+}
