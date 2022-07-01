@@ -1,5 +1,4 @@
 
-
 html {
     box-sizing: border-box;
 }
@@ -22,21 +21,45 @@ html {
     }
 }
 
-body {
-    background: $background;
-    font-family: "TTLakes", sans-serif;
 
-}
 
 html,
 body {
 
     overflow-x: hidden;
+    background: $background;
+    font-family: "TTLakes", sans-serif;
 }
 
-button{
+button {
     cursor: pointer;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
 }
+
+a {
+    &:hover {
+        filter: drop-shadow(0px 0px 15px red);
+        transition: all 0.1s ease-out;
+    }
+}
+
+.page {
+    &--overlay-close {
+        pointer-events: all;
+        position: static
+    }
+
+    &--overlay-open {
+        pointer-events: none;
+        position: fixed
+    }
+}
+
 
 
 .container {
@@ -61,35 +84,49 @@ button{
 
 @media (min-width: 1440px) {
     .container {
+
         box-sizing: border-box;
-        width: calc(100vw - 320px);
+        width: 1120px;
         margin-left: 320px;
         padding-left: 32px;
         padding-right: 32px;
+    }
 
-
+    body {
+        width: 1440px;
+        margin: 0 auto;
     }
 }
 
-.checkbox{
+.checkbox {
     &__input {
         position: absolute;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
     }
-    
+
     &__transform {
         transform: rotate(0.5turn);
     }
-    
+
     &__read {
         cursor: pointer;
+
+        &:hover {
+            filter: drop-shadow(0px 0px 15px red);
+            transition: all 0.1s ease-out;
+        }
     }
-    
+
     &__image {
-    
+
         cursor: pointer;
+
+        &:hover {
+            filter: drop-shadow(0px 0px 15px red);
+            transition: all 0.1s ease-out;
+        }
     }
 
 }

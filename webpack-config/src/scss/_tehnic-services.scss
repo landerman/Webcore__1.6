@@ -1,9 +1,8 @@
 .tehnic-services {
 
+   
 
-
-
-    .tehnic-services__title {
+    &__title {
 
         display: block;
         font-size: 16px;
@@ -69,13 +68,56 @@
 
     .swiper {
         width: 100%;
+        position: relative;
+            &::after{
+                content:'';
+                width: 50px;
+                height: 160px;
+                position: absolute;
+                background:$background;
+                filter: blur(10px);
+                right: -20px;
+                top: 0px;
+                z-index: 10;
+                @media (min-width: 768px) {
+                    position: static;
+                }
+            }
     }
 
+    .checkbox{
+        &__read{
+            padding-left: 32px;
+            position: relative;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: -0.2px;
+            color: $black;
+            &::before{
+                content:'';
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background: url(../img/arrow.svg) no-repeat;
+                left: 0;
+            }
+
+            &--transform::before {
+                transform: rotate(0.5turn);
+
+            }
+        }
+    }
 
     &__checkbox {
         margin-top: 24px;
         display: none;
         cursor: pointer;
+
+        &:hover {
+            filter: drop-shadow(0px 0px 15px red);
+            transition: all 0.1s ease-out;
+        }
 
         &--input {
             position: absolute;
@@ -97,16 +139,7 @@
             background: url(../img/arrow.svg) no-repeat;
         }
 
-        &--read {
-            font-weight: 500;
-            font-size: 16px;
-            letter-spacing: -0.2px;
-            color: $black;
-        }
-    }
-
-    .checkbox__transform {
-        transform: rotate(0.5turn);
+        
     }
 
 

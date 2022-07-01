@@ -1,4 +1,3 @@
-
 .main-page {
 
     .header {
@@ -24,21 +23,22 @@
             justify-content: space-between;
         }
 
-        &__line {
-            width: 2px;
-            height: 32px;
-            background-color: $light-gray;
-            border-radius: 1%;
+
+        &__repair {
+            position: relative;
+
+            ::before {
+                position: absolute;
+                content: "";
+                width: 2px;
+                height: 32px;
+                background-color: $light-gray;
+                border-radius: 1%;
+                left: -20px;
+                top: 4px;
+            }
         }
 
-        &__line-2 {
-            width: 2px;
-            height: 32px;
-            background-color: $light-gray;
-            border-radius: 1%;
-            margin-left: 16px;
-            display: none;
-        }
 
         &__chat {
             display: none;
@@ -53,10 +53,29 @@
         }
 
         &__logo {
+            position: relative;
             width: 40px;
             height: 40px;
             margin-left: 16px;
             align-self: baseline;
+
+            &::before {
+                position: static;
+                content: "";
+                width: 2px;
+                height: 32px;
+                background-color: $light-gray;
+                border-radius: 1%;
+                left: -21px;
+                top: 11px;
+
+                @media (min-width: 768px) {
+                    &{
+                        position: absolute;
+                    }
+                }
+
+            }
         }
 
         .block-left {
@@ -71,6 +90,8 @@
             &__item {
                 margin-left: 16px;
             }
+
+
         }
 
         .nav__btn {
@@ -80,6 +101,10 @@
             background-color: transparent;
             background-image: url(../img/icon_menu.svg);
             cursor: pointer;
+            margin-right: 0;
+            @media (min-width: 768px) {
+                margin-right: 23px;
+            }
         }
     }
 
@@ -109,7 +134,7 @@
                 font-weight: 700;
 
                 &::before {
-                    position: absolute;
+                    position: relative;
                     content: "";
                     left: -16px;
                     height: 39px;
@@ -159,6 +184,14 @@
                 background-position: right;
                 width: 174px;
                 height: 40px;
+
+
+
+                &:hover {
+                    transition: all 0.5s ease-out;
+                    -webkit-filter: grayscale(100%);
+                    filter: grayscale(100%);
+                }
             }
 
             &__checkstatus {
@@ -168,11 +201,31 @@
                 width: 168px;
                 height: 40px;
                 margin-left: 32px;
+
+                &:hover {
+                    transition: all 0.5s ease-out;
+                    -webkit-filter: grayscale(100%);
+                    filter: grayscale(100%);
+                }
             }
         }
 
         .services {
             position: relative;
+            &::after{
+                content:'';
+                width: 70px;
+                height: 50px;
+                position: absolute;
+                background:$background;
+                filter: blur(10px);
+                right: -20px;
+                top: 20px;
+                @media (min-width: 768px) {
+                    position: static;
+                }
+            }
+            
 
             &__list {
                 display: flex;
@@ -180,10 +233,14 @@
                 margin: 0;
                 list-style-type: none;
                 overflow: auto;
-
                 &::-webkit-scrollbar {
                     width: 0;
                     height: 0;
+                }
+                @media (min-width:1440px) {
+                    overflow: visible;
+                    flex-wrap: wrap;
+
                 }
             }
 
@@ -199,6 +256,11 @@
                 margin-left: 0;
                 font-weight: 500;
 
+                &:hover {
+                    filter: drop-shadow(0px 0px 10px red);
+                    transition: all 0.1s ease-out;
+                }
+
                 &:focus {
                     padding: 0 17px 0 17px;
                     background-color: $white;
@@ -206,11 +268,15 @@
                     border-radius: 6px;
                     margin: 24px 16px 0 16px;
                     margin-left: 0;
+                    filter: none;
 
                     @media (min-width:1440px) {
                         margin-top: 8px;
                     }
+
                 }
+
+
 
                 @media (min-width:1440px) {
                     margin-top: 8px;
@@ -282,16 +348,14 @@
             order: 2;
             cursor: pointer;
             margin: 16px 0;
+
+            &:hover {
+                filter: drop-shadow(0px 0px 15px red);
+                transition: all 0.1s ease-out;
+            }
         }
 
-        .checkbox__image {
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            background: url(../img/arrow.svg) no-repeat;
-            margin-left: 0px;
-
-        }
+         
 
         .checkbox__read {
             height: 24px;
@@ -299,9 +363,20 @@
             padding-left: 32px;
             font-size: 16px;
             font-weight: 500;
+            &::before{
+                content:'';
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background: url(../img/arrow.svg) no-repeat;
+                left: 0;
+            }
+            &--transform::before {
+                transform: rotate(0.5turn);
+            }
         }
 
-        .checkbox__transform {
+        .checkbox__read--transform {
             transform: rotate(0.5turn);
         }
 
@@ -314,15 +389,14 @@
 
         .header__profile {
             display: block;
+            margin-right: 22px;
         }
 
         .header__call {
             display: block;
         }
 
-        .header__line-2 {
-            display: block;
-        }
+
 
         .main {
             min-height: 416px;

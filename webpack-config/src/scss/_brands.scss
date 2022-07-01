@@ -19,6 +19,21 @@
 
     .swiper-brand {
         width: 100%;
+        position: relative;
+            &::after{
+                content:'';
+                width: 50px;
+                height: 74px;
+                position: absolute;
+                background:$background;
+                filter: blur(10px);
+                right: -20px;
+                top: 0;
+                z-index: 10;
+                @media (min-width: 768px) {
+                    position: static;
+                }
+            }
 
         &__item {
             display: flex;
@@ -44,12 +59,7 @@
             }
         }
 
-        &__pagination {
 
-            margin-top: 16px;
-            bottom: -16px;
-            text-align: center;
-        }
 
     }
 
@@ -64,14 +74,28 @@
             background-color: $pagination-active;
         }
     }
-
-
-
-
     .checkbox {
         margin-top: 24px;
         display: none;
         cursor: pointer;
+        margin: 16px 0;
+
+        
+        .checkbox {
+            order: 2;
+            cursor: pointer;
+            margin: 16px 0;
+
+            &:hover {
+                filter: drop-shadow(0px 0px 15px red);
+                transition: all 0.1s ease-out;
+            }
+        }
+
+        &:hover {
+            filter: drop-shadow(0px 0px 15px red);
+            transition: all 0.1s ease-out;
+        }
 
         &__image {
             width: 24px;
@@ -80,16 +104,28 @@
         }
 
         &__read {
+            padding-left: 32px;
+            position: relative;
             font-weight: 500;
             font-size: 16px;
             letter-spacing: -0.2px;
             color: $black;
+            
+
+            &::before{
+                content:'';
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background: url(../img/arrow.svg) no-repeat;
+                left: 0;
+            }
+            &--transform::before {
+                transform: rotate(0.5turn);
+            }
         }
 
-        &__transform {
-            transform: rotate(0.5turn);
-
-        }
+       
 
         &__input {
             position: absolute;
@@ -107,10 +143,18 @@
         }
     }
 
+    &__pagination {
+
+        margin-top: 16px;
+        bottom: -16px;
+        text-align: center;
+    }
+
     @media (min-width:768px) {
         .checkbox {
             display: block;
         }
+
         .swiper-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -120,6 +164,7 @@
             height: 160px;
             overflow: hidden;
         }
+
         .swiper-slide {
             box-sizing: border-box;
             width: 100%;

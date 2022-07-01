@@ -1,4 +1,6 @@
 .menu {
+    pointer-events: all !important;
+
     z-index: 100;
     background: $white;
     position: fixed;
@@ -166,8 +168,8 @@
 
 
     .menu {
-        position: absolute;
-        left: 0;
+        position: absolute !important;
+        left: calc((100% - 1440px) / 2);
         box-shadow: none;
 
         &-content {
@@ -176,11 +178,11 @@
         }
 
         &__exit {
-                display: none;
-            }
+            display: none;
+        }
     }
 
-    
+
 }
 
 .langs {
@@ -193,6 +195,7 @@
 
     &__item {
         margin-right: 7px;
+
     }
 }
 
@@ -204,4 +207,18 @@
     font-size: 16px;
     letter-spacing: -0.2px;
     color: $black;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+
+    &.active {
+        color: $menu-text-color;
+    }
+
+    &:hover {
+        filter: drop-shadow(0px 0px 15px red);
+        transition: all 0.1s ease-out;
+    }
+
 }
