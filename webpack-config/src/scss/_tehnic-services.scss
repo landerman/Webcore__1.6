@@ -4,13 +4,10 @@
 
     &__title {
 
-        display: block;
         font-size: 16px;
         line-height: 28px;
         letter-spacing: -0.2px;
         text-transform: uppercase;
-        padding-top: 14px;
-        margin-bottom: 24px;
         background: linear-gradient(90deg, rgba(248, 248, 248, 0) 0%, rgba(255, 255, 255, 1));
         color: $menu-text-color;
     }
@@ -66,6 +63,7 @@
     }
 
     .swiper {
+        margin-top: 16px;
         width: 100%;
         position: relative;
             &::after{
@@ -118,21 +116,21 @@
             transition: all 0.1s ease-out;
         }
 
-        &--input {
+        &-input {
             position: absolute;
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
         }
 
-        &--label {
+        &-label {
             display: flex;
             width: 133px;
             height: 24px;
             margin-bottom: 16px;
         }
 
-        &--image {
+        &-image {
             width: 24px;
             height: 24px;
             background: url(../img/arrow.svg) no-repeat;

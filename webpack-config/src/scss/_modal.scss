@@ -5,7 +5,6 @@
     pointer-events: all !important;
     display: block;
     position: fixed;
-
     top: 0;
     bottom: 0;
     right: 0;
@@ -149,7 +148,7 @@
         &-wrapper {
 
             position: absolute;
-            right: 0;
+            // right: 0;
             left: unset;
             padding: 40px 32px;
             background-color: $white;

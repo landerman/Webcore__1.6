@@ -41,7 +41,7 @@ function blockClick(className) {
 }
 }
 
-var btns = document.querySelectorAll(".menu__langs--link");
+var btns = document.querySelectorAll(".menu__langs-link");
 
 for (var i = 0; i < btns.length; i++) {
 
@@ -93,12 +93,12 @@ goSlider(sliderServices, 240, '.tehnic-services__pagination')
 
 let tehnicServicesCheckbox = document.querySelector('.tehnic-services__checkbox');
 let tehnicServicesWrapper = document.querySelector('.tehnic-services__wrapper')
-let tehnicServicesCheckboxText = document.querySelector('.tehnic-services__checkbox--read');
+let tehnicServicesCheckboxText = document.querySelector('.tehnic-services__checkbox-read');
 
 checkboxChange(tehnicServicesCheckbox, tehnicServicesCheckboxText,tehnicServicesWrapper, 160)
 
 const checkboxMain = document.querySelector('.main-page__checkbox');
-const checkboxTextMain = document.querySelector('.main-page__checkbox--read');
+const checkboxTextMain = document.querySelector('.main-page__checkbox-read');
 const contentText = document.querySelector('.main-page__content-text');
 
 checkboxChange(checkboxMain, checkboxTextMain,  contentText, 139)
@@ -109,7 +109,7 @@ goSlider(sliderBrands, 240, '.brand__pagination')
 
 
 let checkboxBrands = document.querySelector('.brands__checkbox');
-let CheckboxTextBrands = document.querySelector('.brands__checkbox--read');
+let CheckboxTextBrands = document.querySelector('.brands__checkbox-read');
 let wrapperBrands = document.querySelector('.swiper-brand__wrapper');
 
 checkboxChange(checkboxBrands, CheckboxTextBrands, wrapperBrands, 160);

@@ -25,7 +25,7 @@
         justify-content: space-between;
         align-items: center;
 
-        &--left {
+        &-left {
             display: flex;
             align-items: center;
         }
@@ -125,7 +125,7 @@
     &__footer {
         padding: 0 0 0px 24px;
 
-        &--main {
+        &-main {
             width: 196px;
             height: 124px;
             display: flex;
